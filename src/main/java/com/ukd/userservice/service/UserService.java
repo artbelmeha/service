@@ -3,6 +3,7 @@ package com.ukd.userservice.service;
 import java.util.List;
 
 import com.ukd.userservice.dto.CreateUserDto;
+import com.ukd.userservice.dto.UserWithNotesDto;
 import com.ukd.userservice.entity.User;
 
 public interface UserService {
@@ -11,4 +12,6 @@ public interface UserService {
     List<User> getAllUsers();
 
     User updateUser(Long id, CreateUserDto user);
+
+    UserWithNotesDto getUserNotes(Long id);
 }

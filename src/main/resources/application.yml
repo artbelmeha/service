@@ -1,27 +1,5 @@
 server:
   port: 8000
-
 spring:
-  config:
-    enable: false
-  application:
-    name: user-service
-  h2:
-    console:
-      enabled: true
-  datasource:
-    url: jdbc:h2:~/userService
-    driver-class-name: org.h2.Driver
-    username: test
-    password: test
   jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-        jdbc:
-          lob:
-            non_contextual_creation: true
-
+    generate-ddl: true
