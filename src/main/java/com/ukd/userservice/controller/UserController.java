@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ukd.userservice.controller.api.UserApi;
 import com.ukd.userservice.dto.CreateUserDto;
+import com.ukd.userservice.dto.UserWithNotesDto;
 import com.ukd.userservice.entity.User;
 import com.ukd.userservice.service.UserService;
 
@@ -45,5 +46,10 @@ public class UserController implements UserApi {
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    @GetMapping("/{id}/notes")
+    public UserWithNotesDto getUserWithNotes(@PathVariable Long id) {
+        return userService.getUserNotes(id);
     }
 }
